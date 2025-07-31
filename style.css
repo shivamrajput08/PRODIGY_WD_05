@@ -10,7 +10,11 @@ body {
   overflow: hidden;
 }
 
+/* Responsive container */
 .container {
+  width: 90%;
+  max-width: 400px;
+  margin: auto;
   text-align: center;
   background: rgba(255, 255, 255, 0.1);
   padding: 30px;
@@ -34,20 +38,27 @@ body {
   to { text-shadow: 0 0 20px #fff, 0 0 40px #00f2fe; }
 }
 
+/* Search box responsive layout */
 .search-box {
   margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .search-box input {
+  flex: 1;
+  min-width: 150px;
   padding: 10px;
   border: none;
   border-radius: 10px;
-  width: 200px;
 }
 
 .search-box button {
+  flex: 1;
+  min-width: 100px;
   padding: 10px 15px;
-  margin-left: 10px;
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -78,5 +89,22 @@ body {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Media Query for Mobile */
+@media (max-width: 600px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .search-box input,
+  .search-box button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .container {
+    padding: 20px;
   }
 }
